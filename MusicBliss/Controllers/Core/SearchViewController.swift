@@ -1,5 +1,5 @@
 //
-//  TabBarViewController.swift
+//  SearchViewController.swift
 //  MusicBliss
 //
 //  Created by Miras Iskakov on 27.06.2024.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Search"
+        view.backgroundColor = .systemBackground
     }
-    
-
 }
