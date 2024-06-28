@@ -30,6 +30,6 @@ class AuthViewController: UIViewController, WKNavigationDelegate{
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        webView.frame = .view.bounds
+        webView.frame = view.bounds
     }
 }

@@ -29,6 +29,7 @@
 		D82695272C2D7F500015D88F /* AudioTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82695262C2D7F500015D88F /* AudioTrackModel.swift */; };
 		D826952B2C2D7F760015D88F /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826952A2C2D7F760015D88F /* ArtistModel.swift */; };
 		D826952D2C2D7F970015D88F /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826952C2C2D7F970015D88F /* UserProfileModel.swift */; };
+		D826952F2C2E902E0015D88F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826952E2C2E902E0015D88F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		D82695262C2D7F500015D88F /* AudioTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrackModel.swift; sourceTree = "<group>"; };
 		D826952A2C2D7F760015D88F /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		D826952C2C2D7F970015D88F /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		D826952E2C2E902E0015D88F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				D82694EE2C2D538C0015D88F /* AppDelegate.swift */,
 				D82694F02C2D538C0015D88F /* SceneDelegate.swift */,
 				D82694F72C2D538D0015D88F /* Assets.xcassets */,
+				D826952E2C2E902E0015D88F /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				D82695252C2D7F2A0015D88F /* PlaylistModel.swift in Sources */,
 				D826951B2C2D5FD10015D88F /* PlaylistViewController.swift in Sources */,
 				D82695272C2D7F500015D88F /* AudioTrackModel.swift in Sources */,
+				D826952F2C2E902E0015D88F /* Extensions.swift in Sources */,
 				D82694F12C2D538C0015D88F /* SceneDelegate.swift in Sources */,
 				D826952D2C2D7F970015D88F /* UserProfileModel.swift in Sources */,
 				D82695212C2D60600015D88F /* APIColler.swift in Sources */,
