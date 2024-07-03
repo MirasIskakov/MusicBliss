@@ -35,6 +35,8 @@
 		D8B6177C2C35239B00BD8665 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D8B6177B2C35239B00BD8665 /* ReactiveMoya */; };
 		D8B6177E2C35239B00BD8665 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D8B6177D2C35239B00BD8665 /* RxMoya */; };
 		D8B617802C352C8900BD8665 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6177F2C352C8900BD8665 /* AuthTarget.swift */; };
+		D8B617822C3531EE00BD8665 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B617812C3531EE00BD8665 /* AuthResponse.swift */; };
+		D8B617842C356CB100BD8665 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B617832C356CB100BD8665 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		D826952C2C2D7F970015D88F /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		D826952E2C2E902E0015D88F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D8B6177F2C352C8900BD8665 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
+		D8B617812C3531EE00BD8665 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		D8B617832C356CB100BD8665 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 				D82695262C2D7F500015D88F /* AudioTrackModel.swift */,
 				D826952A2C2D7F760015D88F /* ArtistModel.swift */,
 				D826952C2C2D7F970015D88F /* UserProfileModel.swift */,
+				D8B617812C3531EE00BD8665 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 		D82695052C2D55100015D88F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D8B617832C356CB100BD8665 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -292,7 +298,9 @@
 				D82695212C2D60600015D88F /* APIColler.swift in Sources */,
 				D82695192C2D5FBF0015D88F /* PlayerViewController.swift in Sources */,
 				D826951D2C2D5FFC0015D88F /* SearchResultViewController.swift in Sources */,
+				D8B617842C356CB100BD8665 /* AuthViewModel.swift in Sources */,
 				D82695152C2D5F980015D88F /* SettingsViewController.swift in Sources */,
+				D8B617822C3531EE00BD8665 /* AuthResponse.swift in Sources */,
 				D826952B2C2D7F760015D88F /* ArtistModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,7 +42,7 @@ extension AuthTarget: TargetType {
     var headers: [String : String]? {
         var headers = [String : String]()
         
-        let authString = "\("3ced96dae65846a19a31ecb32f4c2b05"):\("169d4680c7f346ba9abfa4c93a79593d")"
+        let authString = "\("873a51705c544578bdb474bb7157792b"):\("0bdc30a6cee1466d89038fdb5d401207")"
         guard let authData = authString.data(using: .utf8) else {
             print("Failure to get base64")
             return nil

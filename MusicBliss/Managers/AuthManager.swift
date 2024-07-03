@@ -60,4 +60,41 @@ final class AuthManager {
         let fiveMinutes: TimeInterval = 300
         return currentDate.addingTimeInterval(fiveMinutes) >= tokenExpirationDate
     }
+    
+    public func exchangeCodeForToken(
+        code: String,
+        completion: @escaping ((Bool) -> Void)
+    ) {
+        provider.request(.getAccessToken(code: code)) { [weak self] result in
+            switch result {
+            case .success(let response):
+                guard let result = try? response.map(AuthResponse.self) else {
+                    completion(false)
+                    return
+                }
+                
+                self?.cacheToken(result: result)
+                completion(true)
+            case .failure(let error):
+                completion(false)
+            }
+        }
+    }
+    
+    private func refreshIfNeeded() {
+        
+    }
+    
+    private func cacheToken(result: AuthResponse) {
+        UserDefaults.standard.setValue(result.accessToken, forKey: "accessToken")
+        
+        if let refreshToken = result.refreshToken {
+            UserDefaults.standard.setValue(refreshToken, forKey: "refreshToken")
+        }
+        
+        UserDefaults.standard.setValue(
+            Date().addingTimeInterval(TimeInterval(result.expiresIn)),
+            forKey: "expirationDate"
+        )
+    }
 }
