@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class AuthViewController: UIViewController, WKNavigationDelegate{
+class AuthViewController: UIViewController, WKNavigationDelegate {
     
     private var webView: WKWebView = {
         let prefs = WKWebpagePreferences()
@@ -19,6 +19,8 @@ class AuthViewController: UIViewController, WKNavigationDelegate{
                                 configuration: config)
         return webView
     }()
+    
+    public var completionHandler: ((Bool) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
