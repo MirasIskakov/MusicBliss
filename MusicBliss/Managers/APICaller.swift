@@ -1,5 +1,5 @@
 //
-//  APIColler.swift
+//  APICaller.swift
 //  MusicBliss
 //
 //  Created by Miras Iskakov on 27.06.2024.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class APIColler {
+final class APICaller {
 
-  static let shared = APIColler()
+  static let shared = APICaller()
 
   private init() {}
 
@@ -22,19 +22,21 @@ final class APIColler {
     case faileedToGetData
   }
 
-  public func getCurentUserProfile(completion: @escaping (Result<UserProfileModel, Error>) -> Void) {
+  public func getCurrentUserProfile(completion: @escaping (Result<UserProfileModel, Error>) -> Void) {
     createRequest(
       with: URL(string: Constants.baseAPIURL + "/me"),
       type: .GET
     ) { baseRequest in
       let task = URLSession.shared.dataTask(with: baseRequest) { data, _, error in
         guard let data = data, error == nil else {
+          completion(.failure(APIError.faileedToGetData as! Error))
           return
         }
         do {
           let result = try JSONDecoder().decode(UserProfileModel.self, from: data)
-          print(result)
-        } catch {
+          completion(.success(result))
+        }
+        catch {
           print(error.localizedDescription)
           completion(.failure(error))
         }
