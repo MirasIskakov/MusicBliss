@@ -35,6 +35,8 @@ class AuthViewController: UIViewController {
         webView.frame = view.bounds
     }
     
+    
+    
     private func setupViewModel() {
         viewModel = AuthViewModel()
     }
@@ -66,7 +68,7 @@ extension AuthViewController: WKNavigationDelegate {
         self.webView.isHidden = true
         viewModel?.exchangeCodeForToken(code: code, completion: { [weak self] success in
             DispatchQueue.main.async {
-                self?.navigationController?.popViewController(animated: true)
+                self?.navigationController?.popToRootViewController(animated: true)
                 self?.completionHandler?(success)
             }
         })
