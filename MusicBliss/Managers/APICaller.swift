@@ -47,7 +47,7 @@ final class APICaller {
 
   public func getNewReleases(completion: @escaping ((Result<NewReleasesResponse, Error>)) -> Void) {
     createRequest(
-      with: URL(string: Constants.baseAPIURL + "/browse/new-releases?limit=1"),
+      with: URL(string: Constants.baseAPIURL + "/browse/new-releases?limit=50"),
       type: .GET
     ) { request in
       let task = URLSession.shared.dataTask(with: request) { data, _, error in
@@ -69,7 +69,7 @@ final class APICaller {
 
   public func getFeaturedPlaylists(completion: @escaping ((Result<FeaturedPlaylistResponse, Error>) -> Void)) {
     createRequest(
-      with: URL(string: Constants.baseAPIURL + "/browse/featured-playlists?limit=2"),
+      with: URL(string: Constants.baseAPIURL + "/browse/featured-playlists?limit=20"),
       type: .GET
     ) { request in
       let task = URLSession.shared.dataTask(with: request) { data, _, error in
